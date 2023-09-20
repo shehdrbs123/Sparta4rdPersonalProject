@@ -904,6 +904,7 @@ GameObject:
   - component: {fileID: 5731531715748707333}
   - component: {fileID: 3239925771640224097}
   - component: {fileID: 5891951659999003384}
+  - component: {fileID: 4571453390731026487}
   m_Layer: 5
   m_Name: StatusUI
   m_TagString: Untagged
@@ -996,6 +997,26 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4571453390731026487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2814979956462691269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4beb5f47ff9c99468b2108e83474060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterImage: {fileID: 0}
+  _name: {fileID: 0}
+  _healthText: {fileID: 0}
+  _staminaText: {fileID: 0}
+  _AttackText: {fileID: 0}
+  _DefenseText: {fileID: 0}
+  _speedText: {fileID: 0}
+  _CiritlcalText: {fileID: 0}
 --- !u!1 &3083852425839737416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,14 +1226,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6509804}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300686, guid: d21555ce72e390f49ba41fd54c373b1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c76e7f8eece13364db5ce35b3d20c43b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1355,14 +1376,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.0990566, g: 0.20221338, b: 1, a: 0.40392157}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ad585d12f41ec7b4c888286f1124eee0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

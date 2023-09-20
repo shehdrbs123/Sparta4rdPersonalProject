@@ -613,6 +613,18 @@ MonoBehaviour:
       startValue: 5
       _currentValue: 0
       _maxValue: 20
+    - StatType: 2
+      startValue: 5
+      _currentValue: 0
+      _maxValue: 100000
+    - StatType: 3
+      startValue: 3
+      _currentValue: 0
+      _maxValue: 100000
+    - StatType: 4
+      startValue: 5
+      _currentValue: 0
+      _maxValue: 80
     attackSO: {fileID: 11400000, guid: 038c9d2d9ac63bb47810584b121634c9, type: 2}
   statsModifiers: []
 --- !u!1 &8972958802563391136

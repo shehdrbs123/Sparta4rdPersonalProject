@@ -23,8 +23,6 @@ public class TopUI : BaseUI
         InventoryUI.onClick.AddListener(OnClickShowInventoryUI);
     }
 
-    
-
     private void Start()
     {
         _uiManager = GameManager.Instance.UIManager;
@@ -46,11 +44,8 @@ public class TopUI : BaseUI
 
     public void OnClickShowStatusUI()
     {
-        GameObject obj = _uiManager.GetUI("YesOrNoUI");
-        YesOrNoUI ynUI = obj.GetComponent<YesOrNoUI>();
-        
-        if(ynUI)
-            ynUI.ShowYesOrNoUI("이것을 하시겠습니까",()=> Debug.Log("Yes"),()=>Debug.Log("No"));
+        GameObject obj = _uiManager.GetUI("StatusUI");
+        obj.SetActive(true);
     }
     
     private void OnClickShowInventoryUI()
