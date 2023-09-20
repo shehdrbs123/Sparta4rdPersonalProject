@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Practice.Scripts;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -47,6 +48,9 @@ public class ChangeCharaterUI : BaseUI
     {
         GameObject player = GameManager.Instance.GetPlayer();
         Animator anim = player.GetComponentInChildren<Animator>();
+        Player playerInstance = player.GetComponent<Player>();
+
+        playerInstance.MainSprite = Jobs[currentSelectedIdx].MainImage;
         anim.runtimeAnimatorController = Jobs[currentSelectedIdx].animator;
         gameObject.SetActive(false);
         

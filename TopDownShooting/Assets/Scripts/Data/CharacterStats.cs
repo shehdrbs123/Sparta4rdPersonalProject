@@ -41,14 +41,6 @@ public class CharacterStats
             dicStats.Add(stats[i].StatType,stats[i]);
         }
     }
-
-    public void Update()
-    {
-        foreach (var stat in stats)
-        {
-            stat.OnStatChanged?.Invoke();
-        }
-    }
 }
 
 public enum StatType{
@@ -87,5 +79,5 @@ public class CharacterStat
 
     [SerializeField]private float _currentValue;
     [SerializeField]private float _maxValue;
-    public Action OnStatChanged;
+    public event Action OnStatChanged;
 }

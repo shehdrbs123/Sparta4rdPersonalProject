@@ -24,20 +24,29 @@ public class PlayerStatusUI : BaseUI
     private void Init()
     {
         GameObject player = GameManager.Instance.GetPlayer();
+        
         playerInstance = player.GetComponent<Player>();
+        
         name.text = playerInstance.GetName();
         playerInstance.OnNameChanged += () => { name.text = playerInstance.GetName(); };
+        
         Money.text = playerInstance.Money.ToString();
         playerInstance.OnMoneyChanged += () => { Money.text = playerInstance.Money.ToString();};
         
+        MainImage.sprite = playerInstance.MainSprite;
+        playerInstance.OnJopChanged += () => {  MainImage.sprite = playerInstance.MainSprite;};
+        
         playerStats = player.GetComponent<CharacterStatsHandler>();
+        
         CharacterStat health = playerStats.GetStat(StatType.Health);
+        Healthbar.fillAmount = health.CurrentValue / health.MaxValue;
         health.OnStatChanged += () =>
         {
             Healthbar.fillAmount = health.CurrentValue / health.MaxValue;
         };
-
+        
         CharacterStat stamina = playerStats.GetStat(StatType.Stamina);
+        StaminaBar.fillAmount = stamina.CurrentValue / stamina.MaxValue;
         stamina.OnStatChanged += () =>
         {
             StaminaBar.fillAmount = stamina.CurrentValue / stamina.MaxValue;

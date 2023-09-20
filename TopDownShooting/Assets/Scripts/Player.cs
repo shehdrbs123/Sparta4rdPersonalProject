@@ -7,7 +7,7 @@ namespace Practice.Scripts
     public class Player : Actor
     {
         [SerializeField] private TextMesh nameTag;
-
+        private SpriteRenderer mainSprite;
         private int _money;
 
         public int Money
@@ -26,11 +26,12 @@ namespace Practice.Scripts
         {
             get
             {
-                
+                return mainSprite.sprite;
             }
             set
             {
-                
+                mainSprite.sprite = value;
+                OnJopChanged?.Invoke();
             }
         }
         public event Action OnMoneyChanged;
@@ -39,6 +40,7 @@ namespace Practice.Scripts
         {
             base.Awake();
             _gameDataManager.Player = gameObject;
+            mainSprite = GetComponentInChildren<SpriteRenderer>();
         }
 
         protected void Start()

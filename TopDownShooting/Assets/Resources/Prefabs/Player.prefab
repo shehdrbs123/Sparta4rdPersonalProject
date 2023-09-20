@@ -603,7 +603,7 @@ MonoBehaviour:
     stats:
     - StatType: 0
       startValue: 100
-      _currentValue: 0
+      _currentValue: 5
       _maxValue: 100
     - StatType: 1
       startValue: 100
