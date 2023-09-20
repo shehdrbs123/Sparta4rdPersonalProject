@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5eead7301fd317479f8ebb2bb0c661d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapTheme: {fileID: 11400000, guid: 68b06d5e561107f449a0c74f8bc8caca, type: 2}
+  MapTheme: {fileID: 11400000, guid: f9b10674bee6900449f630571b49977b, type: 2}
   MakeTop: 1
   MakeBottom: 1
-  MakeLeft: 1
-  MakeRight: 1
-  UpperWallLength: 2
-  LowerWallLength: 2
-  _mapHalfSize: {x: 10, y: 10}
+  MakeLeft: 0
+  MakeRight: 0
+  UpperWallLength: 1
+  LowerWallLength: 1
+  _mapHalfSize: {x: 16, y: 5}
   seed: 2147483647

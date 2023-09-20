@@ -513,7 +513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8275ac7ae2fbd640bf0a2f1d58316e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1976920998373428619, guid: 7b0be77aed5fa8d4986abf0b8e3c8f1a, type: 3}
   shootTransform: {fileID: 7175309061758209809}
 --- !u!50 &1239010766132410903
 Rigidbody2D:
@@ -601,8 +600,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
     statsChangeType: 2
-    maxHealth: 10
-    speed: 5
+    stats:
+    - StatType: 0
+      startValue: 100
+      _currentValue: 0
+      _maxValue: 100
+    - StatType: 1
+      startValue: 100
+      _currentValue: 0
+      _maxValue: 100
+    - StatType: 5
+      startValue: 5
+      _currentValue: 0
+      _maxValue: 20
     attackSO: {fileID: 11400000, guid: 038c9d2d9ac63bb47810584b121634c9, type: 2}
   statsModifiers: []
 --- !u!1 &8972958802563391136

@@ -36,7 +36,7 @@ namespace Practice.Scripts.Entity
         private void Moving(Vector2 direction)
         {
             _direction = direction;
-            _rigid.velocity = direction * _stats.CurrentStates.speed;
+            _rigid.velocity = direction * _stats.GetStat(StatType.Speed).CurrentValue;
             _ani.SetBool("IsMove",direction.magnitude>0);
         }
     }

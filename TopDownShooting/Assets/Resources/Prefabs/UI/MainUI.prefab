@@ -1441,7 +1441,8 @@ MonoBehaviour:
   isIgnoreInput: 0
   ChangeName: {fileID: 7211415907595494253}
   ChangeCharacter: {fileID: 4553107447050463498}
-  ShowLoginList: {fileID: 0}
+  StatusUI: {fileID: 2444856177240445038}
+  InventoryUI: {fileID: 3354749486807038967}
 --- !u!95 &2702367525860777265
 Animator:
   serializedVersion: 5

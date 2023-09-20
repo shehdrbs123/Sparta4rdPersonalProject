@@ -7,6 +7,34 @@ namespace Practice.Scripts
     public class Player : Actor
     {
         [SerializeField] private TextMesh nameTag;
+
+        private int _money;
+
+        public int Money
+        {
+            get
+            {
+                return _money;
+            }
+            set
+            {
+                _money = value;
+                OnMoneyChanged?.Invoke();
+            }
+        }
+        public Sprite MainSprite
+        {
+            get
+            {
+                
+            }
+            set
+            {
+                
+            }
+        }
+        public event Action OnMoneyChanged;
+        public event Action OnJopChanged;
         protected override void Awake()
         {
             base.Awake();
@@ -17,6 +45,7 @@ namespace Practice.Scripts
         {
             OnNameChanged += nameTagChange;
             nameTagChange();
+            Money = 5000;
             DontDestroyOnLoad(gameObject);
         }
 

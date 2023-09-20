@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterStatsHandler : MonoBehaviour
@@ -11,10 +12,15 @@ public class CharacterStatsHandler : MonoBehaviour
 
     private void Awake()
     {
-        UpdateCharacterStats();
+        InitCharacterStats();
     }
 
-    private void UpdateCharacterStats()
+    public CharacterStat GetStat(StatType type)
+    {
+        return CurrentStates.GetStat(type);
+    }
+
+    private void InitCharacterStats()
     {
         AttackSO attackSO = null;
         if (baseStats.attackSO != null)
@@ -22,9 +28,15 @@ public class CharacterStatsHandler : MonoBehaviour
 
         CurrentStates = new CharacterStats { attackSO = attackSO };// 이니셜라이져 통해서 변수를 직접 선택해줄 수 있구만
         CurrentStates.statsChangeType = baseStats.statsChangeType;
-        CurrentStates.maxHealth = baseStats.maxHealth;
-        CurrentStates.speed = baseStats.speed;
+        CurrentStates.stats = baseStats.stats.ToArray();
+        foreach (var stat in CurrentStates.stats)
+        {
+            stat.CurrentValue = stat.startValue;
+        }
+    }
 
-
+    private void UpdateCharacterStats()
+    {
+        
     }
 }
