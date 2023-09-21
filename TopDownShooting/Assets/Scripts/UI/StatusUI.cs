@@ -4,9 +4,10 @@ using System.Collections.Generic;
 using Practice.Scripts;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class StatusUI : MonoBehaviour
+public class StatusUI : BaseUI
 {
     [SerializeField] private Image characterImage;
     [SerializeField] private TMP_Text _name;
@@ -37,14 +38,44 @@ public class StatusUI : MonoBehaviour
         _name.text = playerInstance.GetName();
         characterImage.sprite = playerInstance.MainSprite;
         _healthText.text = health.CurrentValue.ToString() + "/" + health.MaxValue.ToString();
+        _staminaText.text = stamina.CurrentValue.ToString() + "/" + stamina.MaxValue.ToString();
+        _AttackText.text = Attack.CurrentValue.ToString();
+        _DefenseText.text = Defense.CurrentValue.ToString();
+        _speedText.text = speed.CurrentValue.ToString();
+        _CiritlcalText.text = Critical.CurrentValue.ToString();
         
+        
+        playerInstance.OnNameChanged += () => { _name.text = playerInstance.GetName(); };
+        playerInstance.OnJopChanged += () => { characterImage.sprite = playerInstance.MainSprite; };
         
         health.OnStatChanged += () =>
         {
             _healthText.text = health.CurrentValue.ToString() + "/" + health.MaxValue.ToString();
         };
-        playerInstance.OnNameChanged += () => { _name.text = playerInstance.GetName(); };
-        playerInstance.OnJopChanged += () => { characterImage.sprite = playerInstance.MainSprite; };
         
+        stamina.OnStatChanged += () =>
+        {
+            _staminaText.text = stamina.CurrentValue.ToString() + "/" + stamina.MaxValue.ToString();
+        };
+        
+        Attack.OnStatChanged += () =>
+        {
+            _AttackText.text = Attack.CurrentValue.ToString();
+        };
+        
+        Defense.OnStatChanged += () =>
+        {
+            _DefenseText.text = Defense.CurrentValue.ToString();
+        };
+        
+        speed.OnStatChanged += () =>
+        {
+            _speedText.text = speed.CurrentValue.ToString();
+        };
+
+        Critical.OnStatChanged += () =>
+        {
+            _CiritlcalText.text = Critical.CurrentValue.ToString();
+        };
     }
 }

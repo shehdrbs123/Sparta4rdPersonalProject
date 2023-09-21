@@ -1009,14 +1009,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4beb5f47ff9c99468b2108e83474060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterImage: {fileID: 0}
-  _name: {fileID: 0}
-  _healthText: {fileID: 0}
-  _staminaText: {fileID: 0}
-  _AttackText: {fileID: 0}
-  _DefenseText: {fileID: 0}
-  _speedText: {fileID: 0}
-  _CiritlcalText: {fileID: 0}
+  isIgnoreInput: 1
+  characterImage: {fileID: 8293427106352278538}
+  _name: {fileID: 5806925670874367455}
+  _healthText: {fileID: 5996896374757150892}
+  _staminaText: {fileID: 8577752107146812137}
+  _AttackText: {fileID: 3504473000631433089}
+  _DefenseText: {fileID: 7922646958804136172}
+  _speedText: {fileID: 7414194683314945144}
+  _CiritlcalText: {fileID: 7794980867331319053}
 --- !u!1 &3083852425839737416
 GameObject:
   m_ObjectHideFlags: 0
@@ -2361,7 +2362,6 @@ GameObject:
   - component: {fileID: 6093405919079891373}
   - component: {fileID: 1389056027628301027}
   - component: {fileID: 3359956803305575161}
-  - component: {fileID: 978867713443913948}
   m_Layer: 5
   m_Name: PlayerStatus
   m_TagString: Untagged
@@ -2430,24 +2430,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &978867713443913948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8194784155239844696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb90cb77f523544f8eb32322d98c636, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isIgnoreInput: 0
-  MainImage: {fileID: 8293427106352278538}
-  Healthbar: {fileID: 0}
-  StaminaBar: {fileID: 0}
-  name: {fileID: 0}
-  Money: {fileID: 0}
 --- !u!1 &8707522675990536055
 GameObject:
   m_ObjectHideFlags: 0

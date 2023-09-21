@@ -51,6 +51,7 @@ public class PlayerStatusUI : BaseUI
         {
             StaminaBar.fillAmount = stamina.CurrentValue / stamina.MaxValue;
         };
+     
         
         // health.OnStatChanged?.Invoke();
         // stamina.OnStatChanged?.Invoke();
