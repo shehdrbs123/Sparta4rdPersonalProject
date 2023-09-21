@@ -8,20 +8,6 @@ namespace Practice.Scripts
     {
         [SerializeField] private TextMesh nameTag;
         private SpriteRenderer mainSprite;
-        private int _money;
-
-        public int Money
-        {
-            get
-            {
-                return _money;
-            }
-            set
-            {
-                _money = value;
-                OnMoneyChanged?.Invoke();
-            }
-        }
         public Sprite MainSprite
         {
             get
@@ -34,12 +20,26 @@ namespace Practice.Scripts
                 OnJopChanged?.Invoke();
             }
         }
+        private int _money;
+        public int Money
+        {
+            get
+            {
+                return _money;
+            }
+            set
+            {
+                _money = value;
+                OnMoneyChanged?.Invoke();
+            }
+        }
+
         public event Action OnMoneyChanged;
         public event Action OnJopChanged;
         protected override void Awake()
         {
             base.Awake();
-            _gameDataManager.Player = gameObject;
+            OnlineUserManager.Player = gameObject;
             mainSprite = GetComponentInChildren<SpriteRenderer>();
         }
 

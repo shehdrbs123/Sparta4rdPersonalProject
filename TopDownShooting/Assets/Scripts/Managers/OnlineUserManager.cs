@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 namespace Practice.Scripts.Managers
 {
-    public class GameDataManager : MonoBehaviour
+    public class OnlineUserManager : MonoBehaviour
     {
         private Dictionary<string, Actor> Actors = new Dictionary<string, Actor>();
         private int duplicatedCount = 0;
@@ -56,7 +56,5 @@ namespace Practice.Scripts.Managers
             Actors.TryGetValue(nameID, out obj);
             return obj;
         }
-
-        
     }
 }

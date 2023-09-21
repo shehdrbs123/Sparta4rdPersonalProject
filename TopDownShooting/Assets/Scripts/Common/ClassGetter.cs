@@ -31,5 +31,13 @@ namespace Practice.Scripts.Common
             Array.ForEach(objects,x => Prefabs.Add(x.name,x));
             return Prefabs;
         }
+
+        public static Dictionary<string, U> GetResourcePrefab<U>(string filePath) where U : UnityEngine.Object
+        {
+            Dictionary<string, U> Prefabs = new Dictionary<string, U>();
+            U objects = Resources.Load<U>(filePath);
+            Prefabs.Add(objects.name,objects);
+            return Prefabs;
+        }
     }
 }

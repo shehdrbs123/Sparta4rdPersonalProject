@@ -6,12 +6,12 @@ namespace Practice.Scripts
     public class Actor : MonoBehaviour 
     {
         [SerializeField] protected string nameID;
-        protected static GameDataManager _gameDataManager;
+        protected static OnlineUserManager OnlineUserManager;
         public event Action OnNameChanged;
         
         protected virtual void Awake()
         {
-            _gameDataManager = GameManager.Instance.GameDataManager;
+            OnlineUserManager = GameManager.Instance.onlineUserManager;
         }
 
         private void RegistToGameDataManager()
@@ -22,19 +22,19 @@ namespace Practice.Scripts
                 nameID = name;
             }
 #endif
-            nameID = _gameDataManager.Regist(nameID,this);   
+            nameID = OnlineUserManager.Regist(nameID,this);   
         }
 
         private void RemoveToGameDataManager()
         {
-            _gameDataManager.CancelRegist(nameID);
+            OnlineUserManager.CancelRegist(nameID);
         }
 
         public void ChangeRegistName(string newName)
         {
-            _gameDataManager.CancelRegist(nameID);
+            OnlineUserManager.CancelRegist(nameID);
             nameID = newName;
-            _gameDataManager.Regist(nameID, this);
+            OnlineUserManager.Regist(nameID, this);
             OnNameChanged?.Invoke();
         }
         

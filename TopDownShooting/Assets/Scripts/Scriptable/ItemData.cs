@@ -1,4 +1,6 @@
 ﻿
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +11,22 @@ public enum ItemType
     Equipable,
     Consumable,
 }
+
+[CreateAssetMenu(fileName = "Item", menuName = "ScriptableObject/Item",order=0)]
 public class ItemData : ScriptableObject
 {
-    public Image ItemSprite;
+    public string ItemName;
+    public string ItemDescription;
+    public Sprite ItemSprite;
     public ItemType ItemType;
-    public CharacterStat[] ApplyStat;
-    public float[] ApplyDuration;
-    public GameObject ItemObject;
+    public CharacterStats[] ApplyStat;
+    public Duration[] ApplyDuration;
+}
+[Serializable]
+public class Duration
+{
+    public float StartTime;
+    public float EndTime;
+    public float DelayTime;
+    public float RepeatTime;
 }

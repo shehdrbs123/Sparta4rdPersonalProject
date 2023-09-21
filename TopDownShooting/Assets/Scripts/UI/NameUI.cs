@@ -26,7 +26,7 @@ namespace Practice.Scripts.UI
 
         private void Start()
         {
-            player = _gameDataManager.Player.GetComponent<Player>();
+            player = OnlineUserManager.Player.GetComponent<Player>();
             textField.text = player.GetName();
             Button.onClick.AddListener(OnSubmit);
         }

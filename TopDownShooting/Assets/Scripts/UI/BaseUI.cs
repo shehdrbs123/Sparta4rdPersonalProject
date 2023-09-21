@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 public abstract class BaseUI : MonoBehaviour
 {
-    protected static GameDataManager _gameDataManager;
+    protected static OnlineUserManager OnlineUserManager;
     protected static UIManager _uiManager;
     [SerializeField] protected bool isIgnoreInput; 
     protected virtual void Awake()
     {
-        _gameDataManager = GameManager.Instance.GameDataManager;
+        OnlineUserManager = GameManager.Instance.onlineUserManager;
         _uiManager = GameManager.Instance.UIManager;
     }
 

@@ -8,9 +8,10 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameDataManager GameDataManager { get; private set; }
+    public OnlineUserManager onlineUserManager { get; private set; }
     public UIManager UIManager { get; private set; }
     
+    public ItemManager ItemManager { get; private set; }
     private static GameManager _instance = null;
 
     public static GameManager Instance
@@ -36,8 +37,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        GameDataManager = GetComponent<GameDataManager>();
+        onlineUserManager = GetComponent<OnlineUserManager>();
         UIManager = GetComponent<UIManager>();
+        ItemManager = GetComponent<ItemManager>();
     }
 
     private void Start()
@@ -54,12 +56,12 @@ public class GameManager : MonoBehaviour
 
     public MonoBehaviour GetGameData(string nameid)
     {
-        return GameDataManager.Get(nameid);
+        return onlineUserManager.Get(nameid);
     }
 
     public GameObject GetPlayer()
     {
-        return GameDataManager.Player;
+        return onlineUserManager.Player;
     }
 
 }

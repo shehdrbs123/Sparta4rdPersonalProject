@@ -14,7 +14,7 @@ public class PlayerCheck : MonoBehaviour
         {
             player = Instantiate(playerPrefab, transform.position, transform.rotation);
             player.GetComponent<Player>().EnableComponents(true);
-            GameManager.Instance.GameDataManager.Player = player;
+            GameManager.Instance.onlineUserManager.Player = player;
         }
 
         player.transform.position = transform.position;

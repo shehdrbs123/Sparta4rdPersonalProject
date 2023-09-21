@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4214998503436119183}
   - component: {fileID: 2870046023942885983}
   - component: {fileID: 4741693430556789297}
+  - component: {fileID: 1227744705190673697}
+  - component: {fileID: 3388199538102952867}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -70,5 +72,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9621f6bb24507f24ab3e63b13a40e719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UIPrefabs:
-  - {fileID: 7423838372246080249, guid: dac92724fbbd25f42ad8ae045569360c, type: 3}
+--- !u!114 &1227744705190673697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8883165774249360285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539c47982eef47c49760d8ab2222dc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _impactParticleSystem: {fileID: 0}
+  bullet: {fileID: 1976920998373428619, guid: 7b0be77aed5fa8d4986abf0b8e3c8f1a, type: 3}
+--- !u!114 &3388199538102952867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8883165774249360285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5fc982e938b7704899519c2b57aa08e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,14 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    private Canvas test;
+    [SerializeField] private ItemSlotUI[] slots;
 
-
-    public void test2()
+    private void Awake()
     {
-        
+        slots = GetComponentsInChildren<ItemSlotUI>();
     }
 }
