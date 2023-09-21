@@ -53,19 +53,27 @@ namespace Practice.Scripts
             return _Camera;
         }
 
-        public void OnInventory(InputAction.CallbackContext context)
+        public void OnInventory(InputValue value)
         {
-            if (context.phase == InputActionPhase.Started)
+            if (value.isPressed)
             {
                 CallOnInventoryEvent();
             }
         }
 
-        public void OnInteract(InputAction.CallbackContext context)
+        public void OnInteract(InputValue value)
         {
-            if (context.phase == InputActionPhase.Started)
+            if (value.isPressed)
             {
                 CallOnInteractEvent();
+            }
+        }
+
+        public void OnStatus(InputValue value)
+        {
+            if (value.isPressed)
+            {
+                CallOnStatusEvent();
             }
         }
     }

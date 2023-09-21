@@ -12,7 +12,7 @@ public class TopDownCharacterController1 : MonoBehaviour
     [CanBeNull] public event Action<AttackSO> OnAttackEvent;
     [CanBeNull] public event Action OnInventoryEvent;
     [CanBeNull] public event Action<GameObject> OnInteractEvent;
-
+    [CanBeNull] public event Action OnStatusEvent;
     private float _timeSinceLastShoot = 0;
     protected bool IsAttacking = false;
     
@@ -68,5 +68,10 @@ public class TopDownCharacterController1 : MonoBehaviour
     public void CallOnInteractEvent()
     {
         OnInteractEvent?.Invoke(gameObject);
+    }
+
+    public void CallOnStatusEvent()
+    {
+        OnStatusEvent?.Invoke();   
     }
 }

@@ -50,10 +50,7 @@ public class TopUI : BaseUI
     
     private void OnClickShowInventoryUI()
     {
-        GameObject obj = _uiManager.GetUI("ConfirmUI");
-        ConfirmUI cui = obj.GetComponent<ConfirmUI>();
-        
-        if(cui)
-            cui.ShowConfirmUI("테스트");
+        GameObject obj = _uiManager.GetUI("InventoryUI");
+        obj.SetActive(true);
     }
 }

@@ -2,8 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ItemObject : MonoBehaviour
+public class ItemObject : MonoBehaviour, IInteract
 {
     [SerializeField] private ItemData _itemData;
 
@@ -41,4 +42,25 @@ public class ItemObject : MonoBehaviour
 
         _renderer.sprite = _itemData.ItemSprite;
     }
+
+    public void SetOutLine(bool isSet)
+    {
+        if (isSet)
+        {
+            _renderer.color = Color.red;
+        }
+        else
+        {
+            _renderer.color = Color.white;
+        }
+        //gameObject.AddComponent<Outline>();
+    }
+
+    public void Interact(GameObject src)
+    {
+        Inventory inven = src.GetComponent<Inventory>();
+        inven.Add(ItemData);
+        gameObject.SetActive(false);
+    }
+    
 }

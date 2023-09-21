@@ -15,12 +15,15 @@ public enum ItemType
 [CreateAssetMenu(fileName = "Item", menuName = "ScriptableObject/Item",order=0)]
 public class ItemData : ScriptableObject
 {
+    [HideInInspector] public static readonly string EmptySlotName = "EMPTY";
     public string ItemName;
     public string ItemDescription;
     public Sprite ItemSprite;
     public ItemType ItemType;
     public CharacterStats[] ApplyStat;
     public Duration[] ApplyDuration;
+    public bool isCanStack;
+    public int MaxStackCount;
 }
 [Serializable]
 public class Duration

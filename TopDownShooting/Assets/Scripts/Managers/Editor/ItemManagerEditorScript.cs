@@ -9,7 +9,7 @@ public class ItemManagerEditorScript : Editor
         ItemManager manager = target as ItemManager;
         if (GUILayout.Button("테스트 아이템 생성"))
         {
-            GameObject obj = manager.GetItem("TestItem");
+            GameObject obj = manager.GetItem("RedPotion");
             obj.SetActive(true);
         }
         base.OnInspectorGUI();
