@@ -52,5 +52,21 @@ namespace Practice.Scripts
                 _Camera = Camera.main;
             return _Camera;
         }
+
+        public void OnInventory(InputAction.CallbackContext context)
+        {
+            if (context.phase == InputActionPhase.Started)
+            {
+                CallOnInventoryEvent();
+            }
+        }
+
+        public void OnInteract(InputAction.CallbackContext context)
+        {
+            if (context.phase == InputActionPhase.Started)
+            {
+                CallOnInteractEvent();
+            }
+        }
     }
 }
