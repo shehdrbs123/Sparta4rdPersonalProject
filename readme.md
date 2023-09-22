@@ -10,7 +10,7 @@
 
 ## 클래스 설계(계략적)
 
-![Untitled]("Image/Untiled 1.png")
+![Untitled](Image/Untitled 1.png)
 
 ![Untitled](3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8D%E1%85%A2%20%E1%84%80%E1%85%A2%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20d654c18250b5486fb05265050b3da12f/Untitled%201.png)
 
