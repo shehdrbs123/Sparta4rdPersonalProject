@@ -15,11 +15,22 @@
 
 [Chapter 3-2 Unity 게임개발 숙련 개인과제](https://www.notion.so/Chapter-3-2-Unity-3db6735ddda14d6dad34be754e6b0d3f?pvs=21)
 ### 진행한 과제 2번 스파르타 던전
-### 구현 내용
+## 구현 내용
+
+
 ### 필수 과제 
-- 
-### 선택 과제
-- 
+- 상태창 구현
+- 인벤토리 구현
+
+  
+### 그 외
+- 입력 무시기능 완성
+- 공통 UI 설계 및 구현
+- CharacterStats 재설계
+- ItemManager 설계/구현
+- UIManager에 InventoryUI /Status UI 등 관련 UI Prefab 등록;
+
+   
 ## 클래스 설계(계략적)
 
 ![Untitled](Image/Untitled.png)
@@ -30,7 +41,7 @@
 
 [기능/구현 목록](3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8D%E1%85%A2%20%E1%84%80%E1%85%A2%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20d654c18250b5486fb05265050b3da12f/%E1%84%80%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%A9%E1%86%A8%E1%84%85%E1%85%A9%E1%86%A8%20313c5725d92c4bf681d63993a5e322b3.csv)
 
-## 구현 내용
+## 구현 내용 세부
 - 입력 무시기능 추가
   - BaseUI, UIManager를 활용, InventoryUI, StatusUI등 입력 무시가 필요한 UI에 대해 입력 무시기능 추가
 - 공통 UI 설계 및 구현
