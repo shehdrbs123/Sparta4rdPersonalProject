@@ -22,13 +22,25 @@ MonoBehaviour:
     stats:
     - StatType: 0
       startValue: 0
+      _currentValue: 10
+      _maxValue: 0
+    - StatType: 3
+      startValue: 0
       _currentValue: 20
+      _maxValue: 0
+    - StatType: 0
+      startValue: 0
+      _currentValue: 10
+      _maxValue: 0
+    - StatType: 0
+      startValue: 0
+      _currentValue: 10
       _maxValue: 0
     attackSO: {fileID: 0}
   ApplyDuration:
   - StartTime: 0
     EndTime: 0
-    DelayTime: 0
+    DelayTime: 10
     RepeatTime: 0
-  isCanStack: 0
-  MaxStackCount: 0
+  isCanStack: 1
+  MaxStackCount: 12

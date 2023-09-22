@@ -24,6 +24,7 @@ public class InventoryUI : BaseUI
         _inventory = player.GetComponent<Inventory>();
         _inventory.OnItemChanged += UpdateItems;
         slots = new ItemSlotUI[_inventory.InventorySize];
+        
         for (int i = 0; i < slots.Length; i++)
         {
             GameObject obj = _uiManager.GetUI("ItemSlotUI");

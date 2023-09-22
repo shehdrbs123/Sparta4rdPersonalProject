@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class ItemSlotUI : MonoBehaviour
@@ -55,9 +54,7 @@ public class ItemSlotUI : MonoBehaviour
             ItemCountText.text = String.Empty;
         }
     }
-
     
-
     private void UpdateData()
     {
         if (ItemData.ItemName == "EMPTY")
@@ -67,6 +64,10 @@ public class ItemSlotUI : MonoBehaviour
             ItemImage.color = alphaMax;   
         }
         ItemImage.sprite = ItemData.ItemSprite;
-        
+    }
+
+    public void ClickItem()
+    {
+                
     }
 }

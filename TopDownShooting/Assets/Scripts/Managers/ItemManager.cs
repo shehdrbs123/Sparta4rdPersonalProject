@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 
 public class ItemManager : MonoBehaviour
 {
+    public string testItemName;
     private GameObjectPool pool;
     private Dictionary<string, ItemData> dicItemData;
     public static readonly string baseItemPrefab = "ItemObject"; 

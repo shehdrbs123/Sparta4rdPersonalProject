@@ -7,8 +7,10 @@ public class Inventory : MonoBehaviour
 {
     [SerializeField] private Transform throwPos;
     public int InventorySize;
+    
     public ItemData[] ItemList;
     public int[] ItemCount;
+    
     private ItemData EmptyData;
     public event Action OnItemChanged;
 
@@ -28,11 +30,11 @@ public class Inventory : MonoBehaviour
             ItemCount[i] = 0;
         }
 
-        for (int i = 0; i < ItemList.Length; i++)
-        {
-            ItemList[i] = manager.GetItemData("RedPotion");
-            ItemCount[i] = 1;    
-        }
+        // for (int i = 0; i < ItemList.Length; i++)
+        // {
+        //     ItemList[i] = manager.GetItemData("RedPotion");
+        //     ItemCount[i] = 1;    
+        // }
 
         EmptyData = manager.GetItemData(ItemData.EmptySlotName);
     }
