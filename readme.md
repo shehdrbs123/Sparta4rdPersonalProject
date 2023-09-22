@@ -19,16 +19,11 @@
 <br>
 <br>
 
-# 구조설계
-
 ## 과제 2의 세부사항
-
-
 [Chapter 3-2 Unity 게임개발 숙련 개인과제](https://www.notion.so/Chapter-3-2-Unity-3db6735ddda14d6dad34be754e6b0d3f?pvs=21)
 
 <br>
 <br>
-
 
 # 구현 내용
 
@@ -45,8 +40,12 @@
 - ItemManager 설계/구현
 - UIManager에 InventoryUI /Status UI 등 관련 UI Prefab 등록;
 - 이벤트 구독 형식의 UI <-> 데이터간 동기화 설정
+  
+  
+<br>
+<br>
 
-   
+# 구조 설계
 ## 클래스 설계(계략적)
 
 ![Untitled](Image/Untitled.png)
