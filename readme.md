@@ -53,5 +53,5 @@
 - UIManager에 InventoryUI, StatusUI, ItemSlotUI
   - UIPrefab 와 ObjectPool을 이용해, Scene에 UI가 없어도 사용가능하게끔 설계
 - 이벤트 구독 형식의 UI <-> 데이터 간 데이터 동기화
--  
+  
 
