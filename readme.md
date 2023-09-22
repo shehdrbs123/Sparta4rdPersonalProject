@@ -1,5 +1,7 @@
 # 3번째 개인 프로젝트
 
+### 노동균
+
 # 개요
 
  이번 프로젝트에서는 기존 제출된 프로젝트 + 강의의 내용을 포함한 프로젝트에 과제를 진행하여 기존 코드를 활용해 새로운 코드를 작성하고 적용해보는 것을 목표로 진행하였습니다.
@@ -12,8 +14,12 @@
 
 
 [Chapter 3-2 Unity 게임개발 숙련 개인과제](https://www.notion.so/Chapter-3-2-Unity-3db6735ddda14d6dad34be754e6b0d3f?pvs=21)
-
-
+### 진행한 과제 2번 스파르타 던전
+### 구현 내용
+### 필수 과제 
+- 
+### 선택 과제
+- 
 ## 클래스 설계(계략적)
 
 ![Untitled](Image/Untitled.png)
@@ -24,5 +30,17 @@
 
 [기능/구현 목록](3%E1%84%87%E1%85%A5%E1%86%AB%E1%84%8D%E1%85%A2%20%E1%84%80%E1%85%A2%E1%84%8B%E1%85%B5%E1%86%AB%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%20d654c18250b5486fb05265050b3da12f/%E1%84%80%E1%85%B5%E1%84%82%E1%85%B3%E1%86%BC%20%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%A9%E1%86%A8%E1%84%85%E1%85%A9%E1%86%A8%20313c5725d92c4bf681d63993a5e322b3.csv)
 
-
+## 구현 내용
+- 입력 무시기능 추가
+  - BaseUI, UIManager를 활용, InventoryUI, StatusUI등 입력 무시가 필요한 UI에 대해 입력 무시기능 추가
+- 공통 UI 설계 및 구현
+  - YesOrNoUI, ConfirmUI 등 물음에 답을 필요로 하는 UI를 어디서든 사용할 수 있도록 설계
+- CharaterStats 재설계
+  - 능력치에 대해서 추가/삭제가 편리하도록 설계하였음.  
+- ItemManager 설계/구현
+  - Scriptable Object, Prefabs 활용
+- UIManager에 InventoryUI, StatusUI, ItemSlotUI
+  - UIPrefab 와 ObjectPool을 이용해, Scene에 UI가 없어도 사용가능하게끔 설계
+- 이벤트 구독 형식의 UI <-> 데이터 간 데이터 동기화
+-  
 
